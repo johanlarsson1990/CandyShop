@@ -27,8 +27,8 @@ namespace Candyshop.Controllers
             
             if (string.IsNullOrEmpty(category))
             {
-                candies = _candyRepository.GetAllCandy.OrderBy(c => c.CandyId);
-                currentCategory ="All Candy";
+                candies = _candyRepository.GetAllCandy.OrderBy(c => c.CategoryId);
+                currentCategory ="Allt Godis";
             }
             else
             {

@@ -23,13 +23,14 @@
                     </button>
                 </div>
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <ul class="nav navbar-nav">
-                        <li><a asp-controller="Home" asp-action="Index">Home</a></li>
+                    <ol class="nav navbar-nav">
+                        <li><a asp-controller="Home" asp-action="Index">Start</a></li>
                         @await Component.InvokeAsync("CategoryMenu")
-                        <li><a asp-controller="Contact" asp-action="Index">Contact Us</a></li>
-                        @await Component.InvokeAsync("ShoppingCartSummary")
+                        <li><a asp-controller="Contact" asp-action="Index">Kontakta oss</a></li>
                         <partial name="_LoginPartial" />
-                    </ul>
+                        @await Component.InvokeAsync("ShoppingCartSummary")
+                        
+                    </ol>
                     
                 </div>
             </div>

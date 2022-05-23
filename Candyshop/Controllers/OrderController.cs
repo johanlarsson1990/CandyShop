@@ -46,7 +46,7 @@ namespace Candyshop.Controllers
 
         public IActionResult CheckoutComplete()
         {
-            ViewBag.CheckoutCompleteMessage = "Thank you for your order. Enjoy your candy";
+            ViewBag.CheckoutCompleteMessage = "Tack för din beställning, njut av ditt godis! :)";
             return View();
         }
     }

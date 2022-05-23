@@ -5,7 +5,7 @@
     <img alt="@Model.Name" src="@Model.ImageUrl" />
     <div class="caption-full">
         <h3 class="pull-right">@Model.Price</h3>
-        <h3><a href="#>@Model.Name"</h3>
+        <h3><a href="#>@Model.Name"></a></h3>
         <p>@Model.Description</p>
     </div>
     <div class="addToCart">
@@ -13,7 +13,7 @@
             <a class="btn btn-primary"
                asp-controller="ShoppingCart"
                asp-action="AddToShoppingCart"
-               asp-route-candyId="@Model.CandyId">Add to Cart</a>
+               asp-route-candyId="@Model.CandyId">Lägg till</a>
         </p>
     </div>
 </div>

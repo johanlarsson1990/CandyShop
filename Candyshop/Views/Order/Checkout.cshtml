@@ -1,7 +1,7 @@
 ﻿@model Order
 
     <form asp-action="Checkout" method="post" class="form-horizontal" role="form">
-        <h4>You're one step away from ordering awesome candy</h4>
+        <h4>Nu är du ett steg ifrån att beställa grymt godis!</h4>
 
         <div asp-validation-summary="All" class="danger"></div>
 
@@ -37,13 +37,13 @@
             </div>
         </div>
 
-        <div class="form-group">
+     @*   <div class="form-group">
             <label asp-for="State" class="col-md-2 control-label"></label>
             <div class="col-md-5">
                 <input asp-for="State" class="form-control" />
                 <span asp-validation-for="State" class="danger"></span>
             </div>
-        </div>
+        </div>*@
 
         <div class="form-group">
             <label asp-for="ZipCode" class="col-md-2 control-label"></label>
@@ -63,7 +63,7 @@
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-5">
-                <input type="submit" class="btn btn-primary" value="Complete Order" />
+                <input type="submit" class="btn btn-primary" value="Skicka order" />
             </div>
 
         </div>

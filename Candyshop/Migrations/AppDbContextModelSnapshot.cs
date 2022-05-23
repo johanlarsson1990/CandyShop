@@ -61,181 +61,193 @@ namespace Candyshop.Migrations
                         {
                             CandyId = 1,
                             CategoryId = 1,
-                            Description = " Lorem ipsum dolor sit amet, consectetur adiposcing elit, sed do eiusmod tempor...",
-                            ImageThumbnailUrl = "\\Images\\thumbnails\\chocolateCandy3-small.jpg",
-                            ImageUrl = "\\Images\\chocolet.candy.jpg",
+                            Description = " Choklad fyllda praliner",
+                            ImageThumbnailUrl = "\\Images\\thumbnails\\Lindt-choklad-praliner-small.jpg",
+                            ImageUrl = "\\Images\\Lindt-choklad-praliner.jpg",
                             IsInStock = true,
                             IsOnSale = false,
-                            Name = "Assorted Chocolet Candy",
+                            Name = "Lindt Choklad Praliner",
                             Price = 4.95m
                         },
                         new
                         {
                             CandyId = 2,
                             CategoryId = 1,
-                            Description = " Lorem ipsum dolor sit amet, consectetur adiposcing elit, sed do eiusmod tempor...",
-                            ImageThumbnailUrl = "\\Images\\thumbnails\\chocolateCandy-small.jpg",
-                            ImageUrl = "\\Images\\chocolateCandy.jpg",
+                            Description = " Chokladgodisarnas drottning och lösviktsgodisets tungviktare. Geisha är älskad av generationer och kommer så att vara under en lång tid framöver. Den mjuka chokladen och den nötiga karaktären gifter sig i munnen och tillfredsställer ditt chokladbegär likt ingenting annat.",
+                            ImageThumbnailUrl = "\\Images\\thumbnails\\geisha-small.jpg",
+                            ImageUrl = "\\Images\\geisha.jpg",
                             IsInStock = true,
                             IsOnSale = true,
-                            Name = "Assorted Chocolet Candy",
+                            Name = "Geisha Choklad",
                             Price = 3.95m
                         },
                         new
                         {
                             CandyId = 3,
                             CategoryId = 1,
-                            Description = " Lorem ipsum dolor sit amet, consectetur adiposcing elit, sed do eiusmod tempor...",
-                            ImageThumbnailUrl = "\\Images\\thumbnails\\chocolateCandy2-small.jpg",
-                            ImageUrl = "\\Images\\chocolateCandy2.jpg",
+                            Description = " Halvmånar med smak av apelsinchoklad",
+                            ImageThumbnailUrl = "\\Images\\thumbnails\\romerskabagar-small.jpg",
+                            ImageUrl = "\\Images\\romerskabagar.jpg",
                             IsInStock = true,
                             IsOnSale = true,
-                            Name = "Assorted Chocolet Candy",
+                            Name = "Romerska Bågar",
                             Price = 2.95m
                         },
                         new
                         {
                             CandyId = 4,
                             CategoryId = 2,
-                            Description = " Lorem ipsum dolor sit amet, consectetur adiposcing elit, sed do eiusmod tempor...",
-                            ImageThumbnailUrl = "\\Images\\thumbnails\\FruitCandy-small.jpg",
-                            ImageUrl = "\\Images\\FruitCandy.jpg",
+                            Description = " Persikor är ju inte bara en fantastiskt god frukt, det är också en magisk godis. Det är mångas favorit som alltid slinker ner i lördagspåsen och förgyller både dagar, kvällar och nätter. En trogen vapendragare helt enkelt!",
+                            ImageThumbnailUrl = "\\Images\\thumbnails\\persiker-small.jpg",
+                            ImageUrl = "\\Images\\persiker.jpg",
                             IsInStock = true,
                             IsOnSale = true,
-                            Name = "Assorted Fruit Candy",
+                            Name = "Persikor",
                             Price = 6.95m
                         },
                         new
                         {
                             CandyId = 5,
                             CategoryId = 2,
-                            Description = " Lorem ipsum dolor sit amet, consectetur adiposcing elit, sed do eiusmod tempor...",
-                            ImageThumbnailUrl = "\\Images\\thumbnails\\fruitCandy2-small.jpg",
-                            ImageUrl = "\\Images\\fruitCandy2.jpg",
+                            Description = " I en perfekt mix av sött och surt så är dessa vattenmeloner ett måste i livsnjutarens godisskål! De är redan en klassiker bland lösviktsgodiset, och nu kan du njuta ännu mer av dem med en hel påse av godiset.",
+                            ImageThumbnailUrl = "\\Images\\thumbnails\\vattenmelon-small.jpg",
+                            ImageUrl = "\\Images\\vattenemelon.jpg",
                             IsInStock = true,
                             IsOnSale = false,
-                            Name = "Assorted Fruit Candy",
+                            Name = "Vattenmelon",
                             Price = 3.95m
                         },
                         new
                         {
                             CandyId = 6,
                             CategoryId = 2,
-                            Description = " Lorem ipsum dolor sit amet, consectetur adiposcing elit, sed do eiusmod tempor...",
-                            ImageThumbnailUrl = "\\Images\\thumbnails\\fruitCandy3-small.jpg",
-                            ImageUrl = "\\Images\\fruitCandy3.jpg",
+                            Description = " När det kommer till klassisk konfektyr så blir det knappast bättre än det supersmarriga geléhallonet! Se till att ladda upp med en påse eller två innan helgen stundar.",
+                            ImageThumbnailUrl = "\\Images\\thumbnails\\gelehallon-small.jpg",
+                            ImageUrl = "\\Images\\gelehallon.jpg",
                             IsInStock = false,
                             IsOnSale = true,
-                            Name = "Assorted Fruit Candy",
+                            Name = "Geléhallon",
                             Price = 4.95m
                         },
                         new
                         {
                             CandyId = 7,
                             CategoryId = 3,
-                            Description = " Lorem ipsum dolor sit amet, consectetur adiposcing elit, sed do eiusmod tempor...",
-                            ImageThumbnailUrl = "\\Images\\thumbnails\\gummyCandy-small.jpg",
-                            ImageUrl = "\\Images\\gummyCandy.jpg",
+                            Description = " Sura godistungor med smak av frukt. Perfekt till lördagsgodiset eller kalaset!",
+                            ImageThumbnailUrl = "\\Images\\thumbnails\\surtunga-small.jpg",
+                            ImageUrl = "\\Images\\surtunga.jpg",
                             IsInStock = true,
                             IsOnSale = false,
-                            Name = "Assorted Gummy Candy",
+                            Name = "Suratungor",
                             Price = 4.95m
                         },
                         new
                         {
                             CandyId = 8,
                             CategoryId = 3,
-                            Description = " Lorem ipsum dolor sit amet, consectetur adiposcing elit, sed do eiusmod tempor...",
-                            ImageThumbnailUrl = "\\Images\\thumbnails\\gummyCandy2-small.jpg",
-                            ImageUrl = "\\Images\\gummyCandy2.jpg",
+                            Description = " Minidynamit Sur Vattenmelon från Karamello. Sursockrat godis med smak av vattenmelon.",
+                            ImageThumbnailUrl = "\\Images\\thumbnails\\survattenmelon-small.jpg",
+                            ImageUrl = "\\Images\\survattenmelon.jpg",
                             IsInStock = true,
                             IsOnSale = true,
-                            Name = "Assorted Gummy Candy",
+                            Name = "Sur Vattenmelon",
                             Price = 6.95m
                         },
                         new
                         {
                             CandyId = 9,
                             CategoryId = 3,
-                            Description = " Lorem ipsum dolor sit amet, consectetur adiposcing elit, sed do eiusmod tempor...",
-                            ImageThumbnailUrl = "\\Images\\thumbnails\\gummyCandy3-small.jpg",
-                            ImageUrl = "\\Images\\gummyCandy3.jpg",
+                            Description = " En minivariant av de populära Fizzypop-flaskorna.Mjuk konsistens och god bubbelgumsmak.",
+                            ImageThumbnailUrl = "\\Images\\thumbnails\\fizzypop-small.jpg",
+                            ImageUrl = "\\Images\\fizzypop.jpg",
                             IsInStock = true,
                             IsOnSale = true,
-                            Name = "Assorted Gummy Candy",
+                            Name = "Fizzypop",
                             Price = 4.95m
                         },
                         new
                         {
                             CandyId = 10,
                             CategoryId = 4,
-                            Description = " Lorem ipsum dolor sit amet, consectetur adiposcing elit, sed do eiusmod tempor...",
-                            ImageThumbnailUrl = "\\Images\\thumbnails\\halloweenCandy-small.jpg",
-                            ImageUrl = "\\Images\\halloweenCandy.jpg",
+                            Description = " Tack och hej, ditt gamla violsnask. Här är Ultra Violet! Saltlakrits med vit choklad, viol och salmiak.",
+                            ImageThumbnailUrl = "\\Images\\thumbnails\\Ultra-Violet-small.jpg",
+                            ImageUrl = "\\Images\\Ultra-Violet.jpg",
                             IsInStock = true,
                             IsOnSale = true,
-                            Name = "Assorted Halloween Candy",
+                            Name = "Ultra Violet",
                             Price = 3.95m
                         },
                         new
                         {
                             CandyId = 11,
                             CategoryId = 4,
-                            Description = " Lorem ipsum dolor sit amet, consectetur adiposcing elit, sed do eiusmod tempor...",
-                            ImageThumbnailUrl = "\\Images\\thumbnails\\halloweenCandy2-small.jpg",
-                            ImageUrl = "\\Images\\halloweenCandy2.jpg",
+                            Description = " Världens. Saltaste. Lakrits. Vågar du? Lakrits- och salmiakkräm omgiven av salmiaklakrits och salmiak.",
+                            ImageThumbnailUrl = "\\Images\\thumbnails\\svenskjavlar-small.jpg",
+                            ImageUrl = "\\Images\\svenskjavlar.jpg",
                             IsInStock = false,
                             IsOnSale = true,
-                            Name = "Assorted Halloween Candy",
+                            Name = "Svenskjävlar",
                             Price = 5.95m
                         },
                         new
                         {
                             CandyId = 12,
                             CategoryId = 4,
-                            Description = " Lorem ipsum dolor sit amet, consectetur adiposcing elit, sed do eiusmod tempor...",
-                            ImageThumbnailUrl = "\\Images\\thumbnails\\halloweenCandy3-small.jpg",
-                            ImageUrl = "\\Images\\halloweenCandy3.jpg",
+                            Description = " Salmiak pastilles with a strong taste of salmiak.",
+                            ImageThumbnailUrl = "\\Images\\thumbnails\\lakrisal-small.jpg",
+                            ImageUrl = "\\Images\\lakrisal.jpg",
                             IsInStock = true,
                             IsOnSale = true,
-                            Name = "Assorted Halloween Candy",
+                            Name = "Lakrisal",
                             Price = 6.95m
                         },
                         new
                         {
                             CandyId = 13,
                             CategoryId = 5,
-                            Description = " Lorem ipsum dolor sit amet, consectetur adiposcing elit, sed do eiusmod tempor...",
-                            ImageThumbnailUrl = "\\Images\\thumbnails\\hardCandy-small.jpg",
-                            ImageUrl = "\\Images\\hardCandy.jpg",
+                            Description = " Njut av klassikern i karamellform, tillverkad i vår anrika karamellfabrik i Hudiksvall",
+                            ImageThumbnailUrl = "\\Images\\thumbnails\\polka-small.jpg",
+                            ImageUrl = "\\Images\\polka.jpg",
                             IsInStock = true,
                             IsOnSale = false,
-                            Name = "Assorted Hard Candy",
+                            Name = "Polkagrisar",
                             Price = 3.95m
                         },
                         new
                         {
                             CandyId = 14,
                             CategoryId = 5,
-                            Description = " Lorem ipsum dolor sit amet, consectetur adiposcing elit, sed do eiusmod tempor...",
-                            ImageThumbnailUrl = "\\Images\\thumbnails\\hardCandy2-small.jpg",
-                            ImageUrl = "\\Images\\hardCandy2.jpg",
+                            Description = " Äntligen finns våra populära tomteklubbor med fruktsmak! De finns i fem olika färger och säljes osorterat (det blir alltså en överraskning vilken du får).",
+                            ImageThumbnailUrl = "\\Images\\thumbnails\\tomteklubbor-small.jpg",
+                            ImageUrl = "\\Images\\tomteklubbor.jpg",
                             IsInStock = false,
                             IsOnSale = true,
-                            Name = "Assorted Hard Candy",
+                            Name = "Tomteklubbor",
                             Price = 2.95m
                         },
                         new
                         {
                             CandyId = 15,
                             CategoryId = 5,
-                            Description = " Lorem ipsum dolor sit amet, consectetur adiposcing elit, sed do eiusmod tempor...",
-                            ImageThumbnailUrl = "\\Images\\thumbnails\\hardCandy3-small.jpg",
-                            ImageUrl = "\\Images\\hardCandy3.jpg",
+                            Description = " Kanske såg du dessa godingar i kiosken när du var liten och köpte ditt lördagsgodis? En gammal favorit med en fantastisk smak av salmiak, anis och lakrits. Karamellen har ett brunt lager av salt på utsidan, oförklarligt god med ett surt pulver inne i mitten!",
+                            ImageThumbnailUrl = "\\Images\\thumbnails\\kameleonter-small.jpg",
+                            ImageUrl = "\\Images\\kamaleonter.jpg",
                             IsInStock = true,
                             IsOnSale = false,
-                            Name = "Assorted Hard Candy",
+                            Name = "Kameleonter",
                             Price = 5.95m
+                        },
+                        new
+                        {
+                            CandyId = 16,
+                            CategoryId = 4,
+                            Description = " Lakritschips på riktigt!  VARNING! Det är svårt att sluta stoppa dessa chips i munnen när smaklökarna vant sig efter krocken av salta chips och söt lakrits. ",
+                            ImageThumbnailUrl = "\\Images\\thumbnails\\lakritschips-small.jpg",
+                            ImageUrl = "\\Images\\lakritschips.png",
+                            IsInStock = true,
+                            IsOnSale = true,
+                            Name = "Lakrits Chips",
+                            Price = 20m
                         });
                 });
 
@@ -260,27 +272,27 @@ namespace Candyshop.Migrations
                         new
                         {
                             CategoryId = 1,
-                            CategoryName = "Chocolate Candy"
+                            CategoryName = "Choklad Godis"
                         },
                         new
                         {
                             CategoryId = 2,
-                            CategoryName = "Fruit Candy"
+                            CategoryName = "Frukt Godis"
                         },
                         new
                         {
                             CategoryId = 3,
-                            CategoryName = "Gummy Candy"
+                            CategoryName = "Surt Godis"
                         },
                         new
                         {
                             CategoryId = 4,
-                            CategoryName = "Halloween Candy"
+                            CategoryName = "Lakrits"
                         },
                         new
                         {
                             CategoryId = 5,
-                            CategoryName = "Hard Candy"
+                            CategoryName = "Karameller"
                         });
                 });
 
@@ -317,10 +329,6 @@ namespace Candyshop.Migrations
                         .HasColumnType("decimal(18,2)");
 
                     b.Property<string>("PhoneNumber")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("State")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -528,10 +536,12 @@ namespace Candyshop.Migrations
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<string>", b =>
                 {
                     b.Property<string>("LoginProvider")
-                        .HasColumnType("nvarchar(450)");
+                        .HasColumnType("nvarchar(128)")
+                        .HasMaxLength(128);
 
                     b.Property<string>("ProviderKey")
-                        .HasColumnType("nvarchar(450)");
+                        .HasColumnType("nvarchar(128)")
+                        .HasMaxLength(128);
 
                     b.Property<string>("ProviderDisplayName")
                         .HasColumnType("nvarchar(max)");
@@ -568,10 +578,12 @@ namespace Candyshop.Migrations
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("LoginProvider")
-                        .HasColumnType("nvarchar(450)");
+                        .HasColumnType("nvarchar(128)")
+                        .HasMaxLength(128);
 
                     b.Property<string>("Name")
-                        .HasColumnType("nvarchar(450)");
+                        .HasColumnType("nvarchar(128)")
+                        .HasMaxLength(128);
 
                     b.Property<string>("Value")
                         .HasColumnType("nvarchar(max)");
