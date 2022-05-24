@@ -8,6 +8,8 @@ using System.Threading.Tasks;
 
 namespace Candyshop.Controllers
 {
+    [Route("api/[controller]")]
+    [ApiController]
     public class CandyController : Controller
     {
         private readonly ICandyRepository _candyRepository;
@@ -19,6 +21,7 @@ namespace Candyshop.Controllers
             _categoryRepository = categoryRepository;
         }
 
+        [HttpGet]
         public ViewResult List(string category)
         {
              
@@ -42,6 +45,7 @@ namespace Candyshop.Controllers
                 CurrentCategory = currentCategory });
         }
 
+        [HttpGet("{id}")]
         public IActionResult Details(int id)
         {
             var candy = _candyRepository.GetCandyById(id);

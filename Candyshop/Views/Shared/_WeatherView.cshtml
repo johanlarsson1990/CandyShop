@@ -1,0 +1,10 @@
+﻿<div>
+    <script>
+        const url = "https://opendata-download-metfcst.smhi.se/api/category/pmp3g/version/2/geotype/point/lon/16.158/lat/58.5812/data.json"
+        async function GetWeather() {
+            const response = await fetch(url);
+            const data = await response.json();
+            console.log(data);
+        };
+    </script>
+</div>
