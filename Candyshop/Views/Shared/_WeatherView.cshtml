@@ -1,10 +1,40 @@
-﻿<div>
-    <script>
-        const url = "https://opendata-download-metfcst.smhi.se/api/category/pmp3g/version/2/geotype/point/lon/16.158/lat/58.5812/data.json"
-        async function GetWeather() {
-            const response = await fetch(url);
-            const data = await response.json();
-            console.log(data);
-        };
-    </script>
+﻿@*@model Weather*@
+
+<div class="nav navbar-nav navbar-right ">
+    <img id="imgUrl" class="nav navbar-nav navbar-right img-right" src="" />
+    <div class="nav navbar-nav navbar-right" >
+        <p id="temp"></p>
+        </div>
 </div>
+
+<script>
+    //const url = "https://opendata-download-metfcst.smhi.se/api/category/pmp3g/version/2/geotype/point/lon/16.158/lat/58.5812/data.json"
+
+    //Hudiksvall
+    const url = "https://opendata-download-metfcst.smhi.se/api/category/pmp3g/version/2/geotype/point/lon/17.216573/lat/61.73341/data.json"
+
+    async function GetWeather() {
+        const response = await fetch(url);
+        const data = await response.json();
+
+        const img = (data.timeSeries[0].parameters[18].values[0]);
+        const temp = (data.timeSeries[0].parameters[10].values[0]);
+
+        console.log(data);
+        console.log(data.timeSeries[0].parameters[10].values[0]);
+        console.log(data.timeSeries[0].parameters[18].values[0]);
+
+        var weatherObject = {
+            "Temperature": temp + "ºC",
+            "ImageNr": "img",
+            "ImageUrl": "/WeatherSymbols/" + img + ".png"
+        }
+        console.log(weatherObject.ImageUrl);
+
+        //document.getElementById("img").textContent = img;
+        document.getElementById("temp").textContent = weatherObject.Temperature;
+        document.getElementById("imgUrl").src = weatherObject.ImageUrl;
+
+    };
+    GetWeather();
+</script>
