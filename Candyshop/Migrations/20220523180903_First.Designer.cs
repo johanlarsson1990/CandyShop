@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Candyshop.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20220523132647_First commit")]
-    partial class Firstcommit
+    [Migration("20220523180903_First")]
+    partial class First
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

@@ -1,0 +1,42 @@
+﻿
+
+<!--<div>
+    <h1>Vad är det för väder?</h1>-->
+    @*<h1>@Model.Today</h1>*@
+    <!--<img id="imgUrl" src="" />
+    <h2>Temperatur: <span id="temp"></span> C</h2>
+</div>-->
+
+@*<script>
+    //const url = "https://opendata-download-metfcst.smhi.se/api/category/pmp3g/version/2/geotype/point/lon/16.158/lat/58.5812/data.json"
+
+    //Hudiksvall
+    const url = "https://opendata-download-metfcst.smhi.se/api/category/pmp3g/version/2/geotype/point/lon/17.216573/lat/61.73341/data.json"
+    
+        async function GetWeather() {
+            const response = await fetch(url);
+            const data = await response.json();
+            
+            const img = (data.timeSeries[0].parameters[18].values[0]);
+            const temp = (data.timeSeries[0].parameters[10].values[0]);
+
+            console.log(data);
+            console.log(data.timeSeries[0].parameters[10].values[0]);
+            console.log(data.timeSeries[0].parameters[18].values[0]);
+
+            var weatherObject = {
+                "Temperature": "temp",
+                "ImageNr": "img",
+                "ImageUrl": "/WeatherSymbols/" + img + ".png"
+            }
+            console.log(weatherObject.ImageUrl);
+           
+            //document.getElementById("img").textContent = img;
+            document.getElementById("temp").textContent = temp;
+            document.getElementById("imgUrl").src = weatherObject.ImageUrl;
+            
+        };
+    GetWeather();
+</script>*@
+
+
