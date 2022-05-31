@@ -1,0 +1,17 @@
+﻿@using Microsoft.AspNetCore.Identity
+@using Candyshop.Models
+
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+
+@if (SignInManager.IsSignedIn(User) && await UserManager.IsInRoleAsync(UserManager.GetUserAsync(User).Result, "Admin"))
+{
+ <li class="nav-item dropdown show">
+    <a class="btn dropdown-toggle" href="#" data-toggle="dropdown">Admin</a>
+    <div class="dropdown-menu">
+        <a class="dropdown-item" asp-area="Admin" asp-controller="Admin" asp-action="Index">Candy</a>
+        <a class="dropdown-item" href="#">Catagory</a>
+    </div>
+ </li>
+}
+
