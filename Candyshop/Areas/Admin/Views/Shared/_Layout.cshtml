@@ -24,9 +24,9 @@
                 </div>
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ol class="nav navbar-nav">
-                        <li><a asp-controller="Home" asp-action="Index">Start</a></li>
+                        <li><a asp-area="" asp-controller="Home" asp-action="Index">Start</a></li>
                         @await Component.InvokeAsync("CategoryMenu")
-                        <li><a asp-controller="Contact" asp-action="Index">Kontakta oss</a></li>
+                        <li><a asp-area="" asp-controller="Contact" asp-action="Index">Kontakta oss</a></li>
                         <partial name="_LoginPartial" />
                         @await Component.InvokeAsync("ShoppingCartSummary")
                         <li><a asp-controller="Weather" asp-action="Index"></a></li>
