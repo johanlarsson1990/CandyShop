@@ -22,7 +22,8 @@ namespace Candyshop.Componets
             var shoppingCartViewModel = new ShoppingCartViewModel
             {
                 ShoppingCart = _shoppingCart,
-                ShoppingCartTotal = _shoppingCart.GetShoppingCartTotal()
+                ShoppingCartTotal = _shoppingCart.GetShoppingCartTotal(),
+                DiscountTotal = _shoppingCart.GetDiscountTotal()
 
             };
             return View(shoppingCartViewModel);

@@ -93,7 +93,7 @@ namespace Candyshop.Areas.Admin.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("CandyId,Name,Description,Price,ImageUrl,ImageThumbnailUrl,IsOnSale,IsInStock,CategoryId")] Candy candy)
+        public async Task<IActionResult> Edit(int id, [Bind("CandyId,Name,Description,Price,ImageUrl,ImageThumbnailUrl,IsOnSale,SalesPrice,IsInStock,CategoryId")] Candy candy)
         {
             if (id != candy.CandyId)
             {
