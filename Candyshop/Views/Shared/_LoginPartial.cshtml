@@ -5,13 +5,14 @@
 
 @if (SignInManager.IsSignedIn(User))
 {
-    <form asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Page("/Index", new { area = "" })" method="post" id="logoutForm" class="navbar-nav">
+    <form asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })" method="post" id="logoutForm" class="navbar-nav">
         <ul class="nav navbar-nav">
             <li>
                 <a asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">Hejsan @UserManager.GetUserName(User)!</a>
             </li>
             <li>
-                <button type="submit" class="btn btn-link navbar-btn navbar-link">Logga ut</button>
+                @*<button type="submit" class="btn btn-link navbar-btn navbar-link">Logga ut</button>*@
+                <a id="fakeanchor" asp-area="" asp-controller="Home" asp-action="Index">Logga ut</a>
             </li>
         </ul>
     </form>
@@ -23,3 +24,11 @@ else
         <li><a asp-area="Identity" asp-page="/Account/Login">Logga in</a></li>
     </ul>
 }
+
+<script>
+    $("a#fakeanchor").click(function()
+    {
+    $("#logoutForm").submit();
+    return false;
+    });
+</script>
