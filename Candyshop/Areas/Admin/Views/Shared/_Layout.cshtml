@@ -7,7 +7,7 @@
     <link href="~/lib/twitter-bootstrap/css/bootstrap.css" rel="stylesheet" />
     <script src="~/lib/jquery/jquery.js"></script>
     <script src="~/lib/twitter-bootstrap/js/bootstrap.js"></script>
-    <link href="~/content/Site.css" rel="stylesheet" />
+    <link href="~/content/Site.css" rel="stylesheet" type="text/css" />
     <title>@ViewBag.Title</title>
 </head>
 <body>
@@ -29,8 +29,9 @@
                         <li><a asp-controller="Contact" asp-action="Index">Kontakta oss</a></li>
                         <partial name="_LoginPartial" />
                         @await Component.InvokeAsync("ShoppingCartSummary")
+                        <li><a asp-controller="Weather" asp-action="Index"></a></li>
                         <partial name="_WeatherView" />
-                        <partial name="AdminMenuPartial" />
+                        <partial name="AdminMenuPartial"/>
                     </ol>
                     
                 </div>
@@ -40,7 +41,7 @@
         <div class="row">
             <div class="col-md-3">
                 <p class="lead">
-                    <img class="img-responsive" src="~/Images/Kiwifakrikenlogo.png" />
+                    <img class="img-responsive" src="~/Images/candyshoplogo.png" />
                 </p>
             </div>
             <div class="col-md-9">

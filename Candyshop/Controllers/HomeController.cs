@@ -26,5 +26,6 @@ namespace Candyshop.Controllers
 
             return View(homeViewModel);
         }
+    
     }
 }
