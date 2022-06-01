@@ -5,7 +5,23 @@
     background-color: lavender;
     font-family: 'Source Sans Pro', sans-serif;
 }
-
+/*.parent {
+    position: relative;
+    top: 0;
+    left: 0;
+}*/
+#banner {
+    position: absolute;
+    left: 3.7em;
+    max-width: fit-content;
+    
+}
+/*#candythumb {
+    position: relative;
+    top: 0;
+    left: 0;
+    border: 1px red solid;
+}*/
 #imgUrl{
     height: auto;
     width: auto;
@@ -114,3 +130,12 @@ footer {
     background-color: #fcaeae !important;
     border-color: #fba1a1 !important;
 }
+
+@media only screen and (max-width: 600px){
+    #banner {
+        position: absolute;
+        left: 5.7em;
+        max-width: fit-content;
+    }
+}
+

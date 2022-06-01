@@ -107,12 +107,11 @@ namespace Candyshop.Models
         }
         public decimal GetDiscountTotal()
         {
-            var total = GetShoppingCartTotal();
             var discount = _appDbContext.ShoppingCartItems
                 .Where(c => c.ShoppingCartId == ShoppingCartId)
-                .Where(s => s.Candy.IsOnSale == true)
+                .Where(s => s.Candy.IsOnSale == true && s.Candy.SalesPrice > 0)
                 .Select(c => c.Candy.SalesPrice * c.Amount).Sum();
-            return (total - discount);
+            return discount;
         }
     }
 }

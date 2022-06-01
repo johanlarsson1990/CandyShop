@@ -1,10 +1,12 @@
 ﻿@model CandyListViewModel
     
-    
-        <h1>@Model.CurrentCategory</h1>
-        @foreach(var candy in Model.Candies)
-        {
-            <partial name="_candyCard" model="candy" />
-        }
+<div class="row">
+    <h1>@Model.CurrentCategory</h1>
+    @foreach (var candy in Model.Candies)
+    {
+        <partial name="_candyCard" model="candy" />
+    }
+</div>
+        
     
     

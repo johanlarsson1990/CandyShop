@@ -24,15 +24,15 @@
                     @((item.Amount * item.Candy.Price).ToString("c"))
                 </td>
             </tr>
-            @if (item.Candy.IsOnSale == true)
+            @if (item.Candy.IsOnSale == true && item.Candy.SalesPrice > 0)
             {
                 <tr>
                     <td class="text-left"></td>
                 <td class="text-center"></td>
-                <td class="text-left"> -- Kampanjvara -- </td>
+                <td class="text-left" style="font-weight: 600"> -- Kampanjvara -- </td>
                 <td class="text-right">@item.Candy.SalesPrice.ToString("c")</td>
-                <td class="text-right">
-                    @((item.Candy.SalesPrice - item.Candy.Price)* item.Amount)
+                <td class="text-right" style="color: red">
+                    -@((item.Candy.Price - item.Candy.SalesPrice) * item.Amount)
                     
                 </td>
                 </tr>
