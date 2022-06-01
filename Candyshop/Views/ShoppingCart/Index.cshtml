@@ -4,7 +4,7 @@
 <table class="table table-bordered table-striped">
     <thead>
         <tr>
-            <th>&nbsp;</th>
+            @*<th>&nbsp;</th>*@
             <th>Antal</th>
             <th>Godis</th>
             <th class="text-right">Pris</th>
@@ -15,9 +15,15 @@
         @foreach(var item in Model.ShoppingCart.ShoppingCartItems)
         {
             <tr>
-                <td class="text-left"><a asp-controller="ShoppingCart" asp-action="RemoveFromShoppingCar" 
-                                         asp-route-candyId="@item.Candy.CandyId" alt="">Minska antal</a></td>
-                <td class="text-center">@item.Amount</td>
+               @* <td class="text-left"><a asp-controller="ShoppingCart" asp-action="RemoveFromShoppingCar" 
+                                         asp-route-candyId="@item.Candy.CandyId" alt="">Minska antal</a></td>*@
+                   <td class="text-center" style="word-spacing: 1em; font-size: 1.1em">
+                                      <a asp-controller="ShoppingCart" asp-action="RemoveFromShoppingCar" 
+                                         asp-route-candyId="@item.Candy.CandyId" alt="" class="glyphicon glyphicon-minus">   </a>
+                                         @item.Amount
+                                      <a asp-controller="ShoppingCart" asp-action="AddToShoppingCart"
+                                         asp-route-candyId="@item.Candy.CandyId" alt="" class="glyphicon glyphicon-plus">   </a>
+                    </td>
                 <td class="text-left">@item.Candy.Name</td>
                 <td class="text-right">@item.Candy.Price.ToString("c")</td>
                 <td class="text-right">
@@ -27,11 +33,9 @@
             @if (item.Candy.IsOnSale == true && item.Candy.SalesPrice > 0)
             {
                 <tr>
-                    <td class="text-left"></td>
-                <td class="text-center"></td>
-                <td class="text-left" style="font-weight: 600"> -- Kampanjvara -- </td>
-                <td class="text-right">@item.Candy.SalesPrice.ToString("c")</td>
-                <td class="text-right" style="color: red">
+                     <td colspan="2" class="text-right" style="font-weight: 600"> ** Kampanjvara ** </td>
+                     <td class="text-right">@item.Candy.SalesPrice.ToString("c")</td>
+                     <td class="text-right" style="color: red">
                     -@((item.Candy.Price - item.Candy.SalesPrice) * item.Amount)
                     
                 </td>
@@ -41,15 +45,15 @@
     </tbody>
     <tfoot>
         <tr>
-            <td colspan="4" class="text-right">Summa</td>
+            <td colspan="3" class="text-right">Summa</td>
             <td class="text-right">@Model.ShoppingCartTotal.ToString("c")</td>
         </tr>
         <tr>
-            <td colspan="4" class="text-right">Rabatt</td>
+            <td colspan="3" class="text-right">Rabatt</td>
             <td class="text-right">@Model.DiscountTotal.ToString("c")</td>
         </tr>
         <tr>
-            <td colspan="4" class="text-right">Att betala</td>
+            <td colspan="3" class="text-right">Att betala</td>
             <td class="text-right">@((Model.ShoppingCartTotal - Model.DiscountTotal).ToString("c"))</td>
         </tr>
     </tfoot>
