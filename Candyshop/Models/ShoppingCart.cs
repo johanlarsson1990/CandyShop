@@ -110,7 +110,7 @@ namespace Candyshop.Models
             var discount = _appDbContext.ShoppingCartItems
                 .Where(c => c.ShoppingCartId == ShoppingCartId)
                 .Where(s => s.Candy.IsOnSale == true && s.Candy.SalesPrice > 0)
-                .Select(c => c.Candy.SalesPrice * c.Amount).Sum();
+                .Select(c => (c.Candy.Price - c.Candy.SalesPrice) * c.Amount).Sum();
             return discount;
         }
     }
