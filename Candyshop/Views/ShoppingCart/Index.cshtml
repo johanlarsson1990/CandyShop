@@ -24,12 +24,33 @@
                     @((item.Amount * item.Candy.Price).ToString("c"))
                 </td>
             </tr>
+            @if (item.Candy.IsOnSale == true && item.Candy.SalesPrice > 0)
+            {
+                <tr>
+                    <td class="text-left"></td>
+                <td class="text-center"></td>
+                <td class="text-left" style="font-weight: 600"> -- Kampanjvara -- </td>
+                <td class="text-right">@item.Candy.SalesPrice.ToString("c")</td>
+                <td class="text-right" style="color: red">
+                    -@((item.Candy.Price - item.Candy.SalesPrice) * item.Amount)
+                    
+                </td>
+                </tr>
+            }
         }
     </tbody>
     <tfoot>
         <tr>
             <td colspan="4" class="text-right">Summa</td>
             <td class="text-right">@Model.ShoppingCartTotal.ToString("c")</td>
+        </tr>
+        <tr>
+            <td colspan="4" class="text-right">Rabatt</td>
+            <td class="text-right">@Model.DiscountTotal.ToString("c")</td>
+        </tr>
+        <tr>
+            <td colspan="4" class="text-right">Att betala</td>
+            <td class="text-right">@((Model.ShoppingCartTotal - Model.DiscountTotal).ToString("c"))</td>
         </tr>
     </tfoot>
 </table>

@@ -41,9 +41,14 @@
             <div class="form-group">
                 <div class="checkbox">
                     <label>
-                        <input asp-for="IsOnSale" /> @Html.DisplayNameFor(model => model.IsOnSale)
+                        <input asp-for="IsOnSale" id="onSale" onclick="AddSalesPrice()" /> @Html.DisplayNameFor(model => model.IsOnSale)
                     </label>
                 </div>
+            </div>
+            <div class="form-group" id="addPrice" style="display:none">
+                <label asp-for="SalesPrice" class="control-label"></label>
+                <input id="salePrice" asp-for="SalesPrice" class="form-control" />
+                <span asp-validation-for="SalesPrice" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <div class="checkbox">
@@ -54,7 +59,7 @@
             </div>
             <div class="form-group">
                 <label asp-for="CategoryId" class="control-label"></label>
-                <select asp-for="CategoryId" class="form-control" asp-items="ViewBag.CategoryId"></select>
+                <select asp-for="CategoryId" class="form-control" asp-items="ViewBag.CategoryId"></select> 
                 <span asp-validation-for="CategoryId" class="text-danger"></span>
             </div>
             <div class="form-group">
@@ -67,6 +72,23 @@
 <div>
     <a asp-action="Index">Back to List</a>
 </div>
+<script>
+    function AddSalesPrice() {
+
+        var checkBox = document.getElementById("onSale");
+        var div = document.getElementById("addPrice");
+
+        if (checkBox.checked == true) {
+            div.style.display = "block"
+        }
+        else {
+            div.style.display = "none"
+            document.getElementById("salePrice") = 0;
+            
+        }
+
+    }
+</script>
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}

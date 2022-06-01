@@ -9,7 +9,7 @@
 <p>
     <a asp-action="Create">Create New</a>
 </p>
-<table class="table">
+<table class="table table-bordered table-striped">
     <thead>
         <tr>
             <th>
@@ -40,7 +40,7 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
+@foreach (var item in Model.OrderBy(c => c.CategoryId)) {
         <tr>
             <td>
                 @Html.DisplayFor(modelItem => item.Name)
@@ -67,8 +67,8 @@
                 @Html.DisplayFor(modelItem => item.Category.CategoryId)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.CandyId">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.CandyId">Details</a> |
+                <a asp-action="Edit" asp-route-id="@item.CandyId">Edit</a>
+                <a asp-action="Details" asp-route-id="@item.CandyId">Details</a>
                 <a asp-action="Delete" asp-route-id="@item.CandyId">Delete</a>
             </td>
         </tr>

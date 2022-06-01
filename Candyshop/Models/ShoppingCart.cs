@@ -13,6 +13,8 @@ namespace Candyshop.Models
         private readonly AppDbContext _appDbContext;
         public string ShoppingCartId { get; set; }
         public List<ShoppingCartItem> ShoppingCartItems { get; set; }
+
+
         public ShoppingCart(AppDbContext appDbContext)
         {
             _appDbContext = appDbContext;
@@ -97,9 +99,19 @@ namespace Candyshop.Models
 
         public decimal GetShoppingCartTotal()
         {
-            var total = _appDbContext.ShoppingCartItems.Where(c => c.ShoppingCartId == ShoppingCartId).Select(c => c.Candy.Price * c.Amount).Sum();
+            var total = _appDbContext.ShoppingCartItems
+                .Where(c => c.ShoppingCartId == ShoppingCartId)
+                .Select(c => c.Candy.Price * c.Amount).Sum();
 
             return total;
+        }
+        public decimal GetDiscountTotal()
+        {
+            var discount = _appDbContext.ShoppingCartItems
+                .Where(c => c.ShoppingCartId == ShoppingCartId)
+                .Where(s => s.Candy.IsOnSale == true && s.Candy.SalesPrice > 0)
+                .Select(c => c.Candy.SalesPrice * c.Amount).Sum();
+            return discount;
         }
     }
 }
