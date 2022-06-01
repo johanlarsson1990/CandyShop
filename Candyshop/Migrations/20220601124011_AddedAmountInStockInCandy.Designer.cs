@@ -4,14 +4,16 @@ using Candyshop.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Candyshop.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20220601124011_AddedAmountInStockInCandy")]
+    partial class AddedAmountInStockInCandy
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -89,7 +91,7 @@ namespace Candyshop.Migrations
                             IsOnSale = true,
                             Name = "Geisha Choklad",
                             Price = 3.95m,
-                            SalesPrice = 1.99m
+                            SalesPrice = 0m
                         },
                         new
                         {
@@ -103,7 +105,7 @@ namespace Candyshop.Migrations
                             IsOnSale = true,
                             Name = "Romerska Bågar",
                             Price = 2.95m,
-                            SalesPrice = 1.95m
+                            SalesPrice = 0m
                         },
                         new
                         {
@@ -117,7 +119,7 @@ namespace Candyshop.Migrations
                             IsOnSale = true,
                             Name = "Persikor",
                             Price = 6.95m,
-                            SalesPrice = 3.45m
+                            SalesPrice = 0m
                         },
                         new
                         {
@@ -145,7 +147,7 @@ namespace Candyshop.Migrations
                             IsOnSale = true,
                             Name = "Geléhallon",
                             Price = 4.95m,
-                            SalesPrice = 2.49m
+                            SalesPrice = 0m
                         },
                         new
                         {
@@ -173,7 +175,7 @@ namespace Candyshop.Migrations
                             IsOnSale = true,
                             Name = "Sur Vattenmelon",
                             Price = 6.95m,
-                            SalesPrice = 3.59m
+                            SalesPrice = 0m
                         },
                         new
                         {
@@ -187,7 +189,7 @@ namespace Candyshop.Migrations
                             IsOnSale = true,
                             Name = "Fizzypop",
                             Price = 4.95m,
-                            SalesPrice = 2.59m
+                            SalesPrice = 0m
                         },
                         new
                         {
@@ -201,7 +203,7 @@ namespace Candyshop.Migrations
                             IsOnSale = true,
                             Name = "Ultra Violet",
                             Price = 3.95m,
-                            SalesPrice = 2.99m
+                            SalesPrice = 0m
                         },
                         new
                         {
@@ -215,7 +217,7 @@ namespace Candyshop.Migrations
                             IsOnSale = true,
                             Name = "Svenskjävlar",
                             Price = 5.95m,
-                            SalesPrice = 2.99m
+                            SalesPrice = 0m
                         },
                         new
                         {
@@ -229,7 +231,7 @@ namespace Candyshop.Migrations
                             IsOnSale = true,
                             Name = "Lakrisal",
                             Price = 6.95m,
-                            SalesPrice = 3.49m
+                            SalesPrice = 0m
                         },
                         new
                         {
@@ -257,7 +259,7 @@ namespace Candyshop.Migrations
                             IsOnSale = true,
                             Name = "Tomteklubbor",
                             Price = 2.95m,
-                            SalesPrice = 1.99m
+                            SalesPrice = 0m
                         },
                         new
                         {
@@ -285,7 +287,7 @@ namespace Candyshop.Migrations
                             IsOnSale = true,
                             Name = "Lakrits Chips",
                             Price = 20m,
-                            SalesPrice = 10m
+                            SalesPrice = 0m
                         });
                 });
 
