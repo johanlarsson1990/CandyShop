@@ -97,7 +97,7 @@ namespace Candyshop.Areas.Admin.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("OrderDetailId,OrderId,CandyId,Amount,Price")] OrderDetail orderDetail)
+        public async Task<IActionResult> Edit(int id, [Bind("OrderDetailId,OrderId,CandyId,Amount,Price,TotalPrice")] OrderDetail orderDetail)
         {
             if (id != orderDetail.OrderDetailId)
             {
@@ -126,6 +126,7 @@ namespace Candyshop.Areas.Admin.Controllers
             }
             ViewData["CandyId"] = new SelectList(_context.Candies, "CandyId", "CandyId", orderDetail.CandyId);
             ViewData["OrderId"] = new SelectList(_context.Orders, "OrderId", "OrderId", orderDetail.OrderId);
+            ViewData["TotalPrice"] = new SelectList(_context.OrderDetails, "TotalPrice", "TotalPrice", orderDetail.TotalPrice); 
             return View(orderDetail);
         }
 

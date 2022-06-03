@@ -25,17 +25,17 @@
             </div>
             <div class="form-group">
                 <label asp-for="Amount" class="control-label"></label>
-                <input asp-for="Amount" class="form-control" />
+                <input asp-for="Amount" class="form-control" onclick="AddTotalPrice()" id="Amount" />
                 <span asp-validation-for="Amount" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Price" class="control-label"></label>
-                <input asp-for="Price" class="form-control" />
+                <input asp-for="Price" class="form-control" id="Price"/>
                 <span asp-validation-for="Price" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="TotalPrice" class="control-label"></label>
-                <input asp-for="TotalPrice" class="form-control" />
+                <input asp-for="TotalPrice" class="form-control"/>
                 <span asp-validation-for="TotalPrice" class="text-danger"></span>
             </div>
             <div class="form-group">
@@ -44,7 +44,6 @@
         </form>
     </div>
 </div>
-
 <div>
     <a asp-controller="Orders" asp-action="Index">Back to List</a>
 </div>
@@ -52,3 +51,12 @@
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
 }
+<script>
+function AddTotalPrice() {
+const amount = document.getElementById("Amount");
+const price = document.getElementById("Price");
+const TotalPrice = ParseInt(amount) * ParseInt(price);
+console.log(TotalPrice);
+//document.getElementById("Total").textContent = totalPrice;
+}
+</script>

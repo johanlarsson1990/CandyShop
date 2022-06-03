@@ -52,8 +52,9 @@
                 @Html.DisplayFor(modelItem => item.PhoneNumber)
             </td>*@
             <td>
+                <a asp-controller="OrderDetails" asp-action="Index" asp-route-id="@item.OrderId">Order Details</a> |
                 <a asp-action="Edit" asp-route-id="@item.OrderId">Edit</a> |
-                <a asp-controller="OrderDetails" asp-action="Index" asp-route-id="@item.OrderId">Details</a> |
+                <a asp-action="Details" asp-route-id="@item.OrderId">Details</a> |
                 <a asp-action="Delete" asp-route-id="@item.OrderId">Delete</a>
             </td>
         </tr>
