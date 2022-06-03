@@ -43,6 +43,7 @@ namespace Candyshop.Models
         [DataType(DataType.PhoneNumber)]
         [Display(Name = "Telefonnummer")]
         public string PhoneNumber { get; set; }
+        public string Customer => FirstName + " " + LastName;
         public  List<OrderDetail> OrderDetails { get; set; }
 
         [BindNever]

@@ -15,7 +15,7 @@ namespace Candyshop.Models
         public decimal Price { get; set; }
         public decimal TotalPrice { get
             {
-                return Price * Amount - Candy.SalesPrice;
+                return (Price - Candy.SalesPrice) * Amount;
             } }
         public Order Order { get; set; }
         public List<OrderDetail> Details { get; set; }

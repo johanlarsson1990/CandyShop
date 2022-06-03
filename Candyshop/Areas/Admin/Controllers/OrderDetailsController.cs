@@ -22,9 +22,9 @@ namespace Candyshop.Areas.Admin.Controllers
         }
 
         // GET: Admin/OrderDetails
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(int? id)
         {
-            var appDbContext = _context.OrderDetails.Include(o => o.Candy).Include(o => o.Order);
+            var appDbContext = _context.OrderDetails.Include(o => o.Candy).Include(o => o.Order).Where( m => m.OrderId == id);
             return View(await appDbContext.ToListAsync());
         }
 
@@ -52,7 +52,7 @@ namespace Candyshop.Areas.Admin.Controllers
         public IActionResult Create()
         {
             ViewData["CandyId"] = new SelectList(_context.Candies, "CandyId", "CandyId");
-            ViewData["OrderId"] = new SelectList(_context.Orders, "OrderId", "Address");
+            ViewData["OrderId"] = new SelectList(_context.Orders, "OrderId", "OrderId");
             return View();
         }
 
@@ -69,8 +69,8 @@ namespace Candyshop.Areas.Admin.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["CandyId"] = new SelectList(_context.Candies, "CandyId", "CandyId", orderDetail.CandyId);
-            ViewData["OrderId"] = new SelectList(_context.Orders, "OrderId", "Address", orderDetail.OrderId);
+            ViewData["CandyId"] = new SelectList(_context.Candies, "CandyId", "Name", orderDetail.CandyId);
+            ViewData["OrderId"] = new SelectList(_context.Orders, "OrderId", "OrderId", orderDetail.OrderId);
             return View(orderDetail);
         }
 
@@ -87,8 +87,8 @@ namespace Candyshop.Areas.Admin.Controllers
             {
                 return NotFound();
             }
-            ViewData["CandyId"] = new SelectList(_context.Candies, "CandyId", "CandyId", orderDetail.CandyId);
-            ViewData["OrderId"] = new SelectList(_context.Orders, "OrderId", "Address", orderDetail.OrderId);
+            ViewData["CandyId"] = new SelectList(_context.Candies, "CandyId", "Name", orderDetail.CandyId);
+            ViewData["OrderId"] = new SelectList(_context.Orders, "OrderId", "OrderId", orderDetail.OrderId);
             return View(orderDetail);
         }
 
@@ -125,7 +125,7 @@ namespace Candyshop.Areas.Admin.Controllers
                 return RedirectToAction(nameof(Index));
             }
             ViewData["CandyId"] = new SelectList(_context.Candies, "CandyId", "CandyId", orderDetail.CandyId);
-            ViewData["OrderId"] = new SelectList(_context.Orders, "OrderId", "Address", orderDetail.OrderId);
+            ViewData["OrderId"] = new SelectList(_context.Orders, "OrderId", "OrderId", orderDetail.OrderId);
             return View(orderDetail);
         }
 
