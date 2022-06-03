@@ -22,7 +22,16 @@ namespace Candyshop.Controllers
 
         public IActionResult Checkout()
         {
-            return View();
+            _shoppingCart.ShoppingCartItems = _shoppingCart.GetShoppingCartItems();
+
+            if (_shoppingCart.ShoppingCartItems.Count <= 0)
+            {
+                return RedirectToAction("Index", "Home", new { area = "" });
+            }
+            else
+            {
+                return View();
+            }
         }
 
         [HttpPost]

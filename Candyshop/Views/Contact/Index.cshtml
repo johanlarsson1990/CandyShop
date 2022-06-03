@@ -1,2 +1,28 @@
-﻿<h3>Kontakta oss via länken nedan!</h3>
+﻿<script>
+  const form = useRef();
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm('service_j8h67kd', 'template_suc7hmh', form.current, 'n1vPvrSs-M8qUwTPX')
+    
+    e.target.reset();
+    };
+</script>
+
+<h3>Kontakta oss via länken nedan!</h3>
 <email adress="info@candyshop.com" link-text="Kontakta oss"></email>
+<form ref={form} onSubmit={sendEmail}>
+    <div>
+        <input type="text" name='name' placeholder='För & efternamn' required/>
+    </div>
+    <div>
+        <input type="email" name='email' placeholder='Din email' required />
+    </div> 
+    <div>
+        <textarea name="message" rows="7" placeholder='Ditt meddelande' required></textarea>
+    </div>
+    <div>
+         <button type="submit" className='btn btn-primary'>Skicka meddelande</button>
+    </div>      
+</form>
+

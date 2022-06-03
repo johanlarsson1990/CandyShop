@@ -1,0 +1,72 @@
+﻿@model Candyshop.Models.OrderDetail
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>OrderDetail</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Candy)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Candy.CandyId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Amount)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Amount)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Price)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Price)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TotalPrice)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TotalPrice)
+        </dd>
+          <dt>
+            @Html.DisplayNameFor(model => model.Order.FirstName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Order.FirstName)
+        </dd>
+          <dt>
+            @Html.DisplayNameFor(model => model.Order.LastName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Order.LastName)
+        </dd>
+          <dt>
+            @Html.DisplayNameFor(model => model.Order.City)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Order.City)
+        </dd>
+          <dt>
+            @Html.DisplayNameFor(model => model.Order.ZipCode)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Order.ZipCode)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Order.Address)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Order.Address)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.OrderDetailId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

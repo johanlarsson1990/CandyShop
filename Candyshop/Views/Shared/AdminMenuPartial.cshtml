@@ -7,11 +7,13 @@
 @if (SignInManager.IsSignedIn(User) && await UserManager.IsInRoleAsync(UserManager.GetUserAsync(User).Result, "Admin"))
 {
    <li class="dropdown">
-    <a class="dropdown-toggle" href="#" data-toggle="dropdown">Admin</a>
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">Admin<b class="caret"></b></a>
     <ul class="dropdown-menu">
         <li>
             <a class="dropdown-item" asp-area="Admin" asp-controller="Admin" asp-action="Index">Candy</a>
             <a class="dropdown-item" asp-area="Admin" asp-controller="Categories" asp-action="Index">Catagory</a>
+            <div class="divider"></div>
+            <a class="dropdown-item" asp-area="Admin" asp-controller="OrderDetails" asp-action="Index">Order Details</a>
         </li>
     </ul>
    </li>

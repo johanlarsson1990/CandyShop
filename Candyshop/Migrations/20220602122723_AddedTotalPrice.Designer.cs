@@ -4,14 +4,16 @@ using Candyshop.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Candyshop.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20220602122723_AddedTotalPrice")]
+    partial class AddedTotalPrice
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -374,9 +376,6 @@ namespace Candyshop.Migrations
                     b.Property<int>("CandyId")
                         .HasColumnType("int");
 
-                    b.Property<int?>("OrderDetailId1")
-                        .HasColumnType("int");
-
                     b.Property<int>("OrderId")
                         .HasColumnType("int");
 
@@ -386,8 +385,6 @@ namespace Candyshop.Migrations
                     b.HasKey("OrderDetailId");
 
                     b.HasIndex("CandyId");
-
-                    b.HasIndex("OrderDetailId1");
 
                     b.HasIndex("OrderId");
 
@@ -633,10 +630,6 @@ namespace Candyshop.Migrations
                         .HasForeignKey("CandyId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-
-                    b.HasOne("Candyshop.Models.OrderDetail", null)
-                        .WithMany("Details")
-                        .HasForeignKey("OrderDetailId1");
 
                     b.HasOne("Candyshop.Models.Order", "Order")
                         .WithMany("OrderDetails")

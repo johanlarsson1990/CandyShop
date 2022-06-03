@@ -13,8 +13,12 @@ namespace Candyshop.Models
         public Candy Candy { get; set; }
         public int Amount { get; set; }
         public decimal Price { get; set; }
+        public decimal TotalPrice { get
+            {
+                return Price * Amount - Candy.SalesPrice;
+            } }
         public Order Order { get; set; }
-
+        public List<OrderDetail> Details { get; set; }
 
     }
 }
